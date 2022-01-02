@@ -1,0 +1,20 @@
+# - name: Create organization
+#   organization:
+#     name: "Suneel"
+#     description: "Suneel organization"
+#     state: present
+#     controller_config_file: "tower_details.cfg"
+
+- name: create schedule
+  schedule:
+     name: Test Schedule
+     controller_host: "tower1.0f2e.example.opentlc.com"
+     controller_username: "admin"
+     controller_password: "redhat"
+     unified_job_templae: "Demo Job Template"
+     inventory: "Demo Inventory"
+     validate_certs: no
+     enabled: yes
+     state: present
+     rrule: "DTSTART:20220103T130000Z RRULE:FREQ=WEEKLY;INTERVAL=1;COUNT=1"
+  register: schResult

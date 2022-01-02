@@ -1,0 +1,7 @@
+---
+- name: test awx utils
+  hosts: localshot
+  collections:
+    - awx.awx
+  roles:
+     - tower-utils
