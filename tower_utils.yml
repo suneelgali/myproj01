@@ -1,6 +1,6 @@
 ---
 - name: test awx utils
-  hosts: localshot
+  hosts: localhost
   collections:
     - awx.awx
   roles:
